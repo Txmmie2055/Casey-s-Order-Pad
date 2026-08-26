@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
 
 <style>
 *{box-sizing:border-box}
-
 :root{
   --bg:#ffff;
   --panel:#add8e5;
@@ -20,7 +20,6 @@
   --item:#00cec8;
   --special:#ffb6c1;
 }
-
 body{
   margin:0;
   min-height:100vh;
@@ -28,9 +27,7 @@ body{
   color:var(--text);
   font-family:Arial,Helvetica,sans-serif;
 }
-
 button,input,select,textarea{font:inherit}
-
 button{
   color:#fff;
   background:#242424;
@@ -40,10 +37,8 @@ button{
   cursor:pointer;
   font-weight:700;
 }
-
 button:hover{filter:brightness(1.15)}
 button:active{transform:translateY(1px)}
-
 .topbar{
   height:80px;
   display:flex;
@@ -52,18 +47,8 @@ button:active{transform:translateY(1px)}
   padding:0 14px;
   border-bottom:1px solid #333;
 }
-
-.logo{
-  font-size:21px;
-  font-weight:800;
-}
-
-.top-actions{
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
-
+.logo{font-size:21px;font-weight:800}
+.top-actions{display:flex;gap:8px;align-items:center}
 input,select{
   color:#fff;
   background:#222;
@@ -72,20 +57,12 @@ input,select{
   padding:10px 12px;
   outline:none;
 }
-
-input:focus,select:focus,textarea:focus{
-  border-color:#428cff
-}
-
-.menu-name-input{
-  width:145px;
-}
-
+input:focus,select:focus,textarea:focus{border-color:#428cff}
+.menu-name-input{width:145px}
 .active{
   background:var(--blue2);
   border-color:#428cff;
 }
-
 main{
   display:grid;
   grid-template-columns:minmax(520px,1.2fr) minmax(400px,1fr);
@@ -93,14 +70,12 @@ main{
   padding:12px;
   min-height:calc(100vh - 80px);
 }
-
 .panel{
   background:var(--panel);
   border:1px solid var(--border);
   border-radius:10px;
   overflow:hidden;
 }
-
 .panel-header{
   min-height:64px;
   padding:10px 12px;
@@ -109,13 +84,7 @@ main{
   gap:10px;
   border-bottom:1px solid #444;
 }
-
-.panel-header h2{
-  font-size:16px;
-  margin:0;
-  flex:1;
-}
-
+.panel-header h2{font-size:16px;margin:0;flex:1}
 .menu-pill{
   background:#34254e;
   color:#cdb7ff;
@@ -124,16 +93,8 @@ main{
   padding:7px 14px;
   font-style:italic;
 }
-
-.clear{
-  background:#851717;
-  border-color:#ef3333;
-}
-
-.content{
-  padding:12px;
-}
-
+.clear{background:#851717;border-color:#ef3333}
+.content{padding:12px}
 .section-title{
   color:#72b1ff;
   font-size:14px;
@@ -141,19 +102,16 @@ main{
   padding-bottom:7px;
   border-bottom:1px solid #444;
 }
-
 .special-title{
   color:#ff7b7b;
   border-color:#e52525;
   margin-top:20px;
 }
-
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:8px;
 }
-
 .menu-button{
   min-height:65px;
   background:var(--item);
@@ -162,22 +120,14 @@ main{
   font-size:15px;
   text-align:center;
 }
-
-.menu-button.special{
-  background:var(--special);
-}
-
-.current-order{
-  margin-top:28px;
-}
-
+.menu-button.special{background:var(--special)}
+.current-order{margin-top:28px}
 .order-empty{
   text-align:center;
   color:#777;
   padding:20px 5px;
   font-style:italic;
 }
-
 .order-row{
   display:flex;
   align-items:center;
@@ -188,22 +138,16 @@ main{
   padding:8px;
   margin-bottom:6px;
 }
-
-.order-row .name{
-  flex:1;
-}
-
+.order-row .name{flex:1}
 .order-row .qty{
   color:#aaa;
   font-size:13px;
 }
-
 .small-danger{
   padding:5px 8px;
   background:#661616;
   border-color:#a92b2b;
 }
-
 .receipt-head{
   display:flex;
   align-items:center;
@@ -212,17 +156,8 @@ main{
   border-bottom:1px solid #456b98;
   padding:10px 12px;
 }
-
-.receipt-head h2{
-  font-size:16px;
-  margin:0;
-  flex:1;
-}
-
-.receipt-head button{
-  border-color:#428cff;
-}
-
+.receipt-head h2{font-size:16px;margin:0;flex:1}
+.receipt-head button{border-color:#428cff}
 .receipt-controls{
   display:flex;
   align-items:center;
@@ -232,23 +167,13 @@ main{
   color:#aaa;
   font-size:13px;
 }
-
 .discount{
   display:flex;
   align-items:center;
   gap:8px;
 }
-
-.discount input{
-  width:80px;
-}
-
-.receipt-controls label{
-  display:flex;
-  align-items:center;
-  gap:5px;
-}
-
+.discount input{width:80px}
+.receipt-controls label{display:flex;align-items:center;gap:5px}
 #receipt{
   width:calc(100% - 24px);
   margin:0 12px 12px;
@@ -263,31 +188,21 @@ main{
   font-size:14px;
   line-height:1.5;
 }
-
-/* EDITOR */
-
-.editor{
-  display:none;
-}
-
-.editor.active-editor{
-  display:block;
-}
-
+.editor{display:none}
+.editor.active-editor{display:block}
+.order-mode.hidden{display:none}
 .editor-toolbar{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:8px;
   margin-bottom:12px;
 }
-
 .editor-form{
   display:grid;
   grid-template-columns:1fr 130px 140px;
   gap:8px;
   margin-bottom:14px;
 }
-
 .editor-list{
   display:flex;
   flex-direction:column;
@@ -295,7 +210,6 @@ main{
   max-height:520px;
   overflow:auto;
 }
-
 .editor-row{
   display:grid;
   grid-template-columns:1fr 100px 95px 80px;
@@ -306,91 +220,15 @@ main{
   border-radius:7px;
   padding:7px;
 }
-
-.editor-row .price{
-  text-align:right;
-  color:#bfc8d5;
-}
-
-.editor-row button{
-  padding:7px 9px;
-}
-
+.editor-row .price{text-align:right;color:#bfc8d5}
+.editor-row button{padding:7px 9px}
 .category-chip{
   color:#8fbfff;
   font-size:12px;
   text-transform:uppercase;
   letter-spacing:.5px;
 }
-
-/* SPECIALS TAB */
-
-.specials-screen{
-  display:none;
-  grid-column:1 / -1;
-}
-
-.specials-screen.active-specials{
-  display:block;
-}
-
-.specials-header{
-  background:#7b2944;
-  border-bottom:1px solid #a84d68;
-}
-
-.specials-header h2{
-  color:#fff;
-}
-
-.specials-content{
-  padding:16px;
-}
-
-.specials-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;
-}
-
-.special-card{
-  background:#202020;
-  border:1px solid #444;
-  border-radius:10px;
-  overflow:hidden;
-}
-
-.special-card-header{
-  background:#ffb6c1;
-  color:#222;
-  padding:14px;
-  font-size:17px;
-  font-weight:800;
-}
-
-.special-card-body{
-  padding:14px;
-}
-
-.special-card-body ul{
-  margin:0;
-  padding-left:22px;
-}
-
-.special-card-body li{
-  margin:8px 0;
-  color:#eee;
-}
-
-.special-note{
-  color:#aaa;
-  font-size:13px;
-  margin-top:16px;
-  text-align:center;
-}
-
-/* STATUS */
-
+.hidden{display:none!important}
 .status{
   position:fixed;
   bottom:14px;
@@ -405,67 +243,59 @@ main{
   pointer-events:none;
   transition:.2s;
 }
+.status.show{opacity:1}
 
-.status.show{
-  opacity:1;
+/* SPECIALS TAB - matches the existing menu style */
+.specials-screen{
+  display:none;
+  grid-column:1 / -1;
 }
 
-/* MOBILE */
+.specials-screen.active-specials{
+  display:block;
+}
+
+.specials-list{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.special-info{
+  background:#202020;
+  border:1px solid #333;
+  border-radius:7px;
+  padding:12px;
+}
+
+.special-info-name{
+  color:#ffb6c1;
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.special-info-items{
+  color:#eee;
+  line-height:1.6;
+}
+
+.special-info-items span{
+  color:#aaa;
+}
 
 @media(max-width:900px){
-
-  main{
-    grid-template-columns:1fr;
-  }
-
-  .specials-screen{
-    grid-column:auto;
-  }
-
-  .editor-form{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .editor-form button{
-    grid-column:1/-1;
-  }
-
-  .specials-grid{
-    grid-template-columns:1fr;
-  }
+  main{grid-template-columns:1fr}
+  .editor-form{grid-template-columns:1fr 1fr}
+  .editor-form button{grid-column:1/-1}
 }
-
 @media(max-width:620px){
-
-  .topbar{
-    height:auto;
-    min-height:80px;
-    align-items:flex-start;
-    padding:12px;
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .top-actions{
-    width:100%;
-    flex-wrap:wrap;
-  }
-
-  main{
-    padding:8px;
-  }
-
-  .menu-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  .editor-row{
-    grid-template-columns:1fr 80px;
-  }
-
-  .editor-row button{
-    width:100%;
-  }
+  .topbar{height:auto;min-height:80px;align-items:flex-start;padding:12px;flex-direction:column;gap:10px}
+  .top-actions{width:100%;flex-wrap:wrap}
+  main{padding:8px}
+  .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .editor-row{grid-template-columns:1fr 80px}
+  .editor-row button{width:100%}
 }
 </style>
 </head>
@@ -473,1667 +303,582 @@ main{
 <body>
 
 <header class="topbar">
-
   <div class="logo">Order Pad</div>
 
   <div class="top-actions">
-
-    <input
-      id="menuName"
-      class="menu-name-input"
-      placeholder="Menu name..."
-    >
-
+    <input id="menuName" class="menu-name-input" placeholder="Menu name...">
     <button id="loadMenuBtn">Load</button>
-
-    <button id="orderTab" class="active">
-      Order
-    </button>
-
-    <button id="specialsTab">
-      Specials
-    </button>
-
-    <button id="editTab">
-      Edit Menu
-    </button>
-
+    <button id="orderTab" class="active">Order</button>
+    <button id="specialsTab">Specials</button>
+    <button id="editTab">Edit Menu</button>
   </div>
-
 </header>
 
 <main>
 
   <!-- ORDER SCREEN -->
-
   <section id="orderScreen" class="panel order-mode">
-
     <div class="panel-header">
-
-      <h2>
-        Place Order
-        <span style="color:#777">?</span>
-      </h2>
-
-      <span id="menuPill" class="menu-pill">
-        Caseys
-      </span>
-
-      <button id="clearOrderBtn" class="clear">
-        Clear order
-      </button>
-
+      <h2>Place Order <span style="color:#777">?</span></h2>
+      <span id="menuPill" class="menu-pill">Caseys</span>
+      <button id="clearOrderBtn" class="clear">Clear order</button>
     </div>
 
     <div class="content" id="menuButtons"></div>
-
   </section>
 
-
   <!-- RECEIPT -->
-
   <section id="receiptScreen" class="panel order-mode">
-
     <div class="receipt-head">
-
       <h2>Receipt</h2>
-
-      <button id="copyBtn">
-        Copy receipt
-      </button>
-
-      <button id="selectBtn">
-        Select all
-      </button>
-
+      <button id="copyBtn">Copy receipt</button>
+      <button id="selectBtn">Select all</button>
     </div>
 
     <div class="receipt-controls">
-
       <div class="discount">
-
         <span>Discount %</span>
-
-        <input
-          id="discount"
-          type="number"
-          min="0"
-          max="100"
-          value="0"
-        >
-
+        <input id="discount" type="number" min="0" max="100" value="0">
       </div>
 
       <label>
-
-        <input
-          id="breakdown"
-          type="checkbox"
-        >
-
+        <input id="breakdown" type="checkbox">
         Include breakdown
-
       </label>
 
       <label>
-
-        <input
-          id="shorthand"
-          type="checkbox"
-          checked
-        >
-
+        <input id="shorthand" type="checkbox" checked>
         Shorthand
-
       </label>
-
     </div>
 
-    <textarea
-      id="receipt"
-      readonly
-    >(no items)</textarea>
-
+    <textarea id="receipt" readonly>(no items)</textarea>
   </section>
-
 
   <!-- SPECIALS SCREEN -->
-
-  <section
-    id="specialsScreen"
-    class="panel specials-screen"
-  >
-
-    <div class="panel-header specials-header">
-
-      <h2>
-        Specials
-      </h2>
-
-      <span class="menu-pill">
-        What's inside?
-      </span>
-
-    </div>
-
-    <div class="specials-content">
-
-      <div class="specials-grid">
-
-        <!-- WAKE UP SPECIAL -->
-
-        <div class="special-card">
-
-          <div class="special-card-header">
-            Wake Up Special
-          </div>
-
-          <div class="special-card-body">
-
-            <ul>
-              <li>5 × Espresso</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <!-- BREAKFAST SPECIAL -->
-
-        <div class="special-card">
-
-          <div class="special-card-header">
-            Breakfast Special
-          </div>
-
-          <div class="special-card-body">
-
-            <ul>
-              <li>1 × Hash Brown</li>
-              <li>1 × Plate of Bacon</li>
-              <li>1 × Espresso</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <!-- COP SPECIAL -->
-
-        <div class="special-card">
-
-          <div class="special-card-header">
-            Cop Special
-          </div>
-
-          <div class="special-card-body">
-
-            <ul>
-              <li>1 × Donut</li>
-              <li>1 × Espresso</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <!-- ADRENALINE JUNKIE -->
-
-        <div class="special-card">
-
-          <div class="special-card-header">
-            Adrenaline Junkie
-          </div>
-
-          <div class="special-card-body">
-
-            <ul>
-              <li>5 × BedBull</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <!-- OH YEAH -->
-
-        <div class="special-card">
-
-          <div class="special-card-header">
-            OH YEAH!
-          </div>
-
-          <div class="special-card-body">
-
-            <ul>
-              <li>1 × Donut</li>
-              <li>1 × French Toast</li>
-              <li>1 × Strawberry Milkshake</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="special-note">
-        Donut is only available through the specials.
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EDIT MENU SCREEN -->
-
-  <section
-    id="editorScreen"
-    class="panel editor"
-  >
+  <section id="specialsScreen" class="panel specials-screen">
 
     <div class="panel-header">
-
-      <h2>
-        Menu Editor
-      </h2>
-
-      <button
-        id="saveMenuBtn"
-        class="active"
-      >
-        Save menu
-      </button>
-
+      <h2>Specials</h2>
+      <span class="menu-pill">What's inside?</span>
     </div>
 
     <div class="content">
 
+      <div class="section-title special-title">
+        Special Contents
+      </div>
+
+      <div class="specials-list">
+
+        <div class="special-info">
+          <div class="special-info-name">
+            Wake Up Special
+          </div>
+          <div class="special-info-items">
+            5 × Espresso
+          </div>
+        </div>
+
+        <div class="special-info">
+          <div class="special-info-name">
+            Breakfast Special
+          </div>
+          <div class="special-info-items">
+            1 × Hash Brown<br>
+            1 × Plate of Bacon<br>
+            1 × Espresso
+          </div>
+        </div>
+
+        <div class="special-info">
+          <div class="special-info-name">
+            Cop Special
+          </div>
+          <div class="special-info-items">
+            1 × Donut<br>
+            1 × Espresso
+          </div>
+        </div>
+
+        <div class="special-info">
+          <div class="special-info-name">
+            Adrenaline Junkie
+          </div>
+          <div class="special-info-items">
+            5 × BedBull
+          </div>
+        </div>
+
+        <div class="special-info">
+          <div class="special-info-name">
+            OH YEAH!
+          </div>
+          <div class="special-info-items">
+            1 × Donut<br>
+            1 × French Toast<br>
+            1 × Strawberry Milkshake
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDIT MENU SCREEN -->
+  <section id="editorScreen" class="panel editor">
+    <div class="panel-header">
+      <h2>Menu Editor</h2>
+      <button id="saveMenuBtn" class="active">Save menu</button>
+    </div>
+
+    <div class="content">
       <div class="editor-toolbar">
-
-        <input
-          id="editorMenuName"
-          placeholder="Menu name"
-        >
-
+        <input id="editorMenuName" placeholder="Menu name">
         <select id="categorySelect">
-
-          <option value="Food">
-            Food
-          </option>
-
-          <option value="Drinks">
-            Drinks
-          </option>
-
-          <option value="Specials">
-            Specials
-          </option>
-
+          <option value="Food">Food</option>
+          <option value="Drinks">Drinks</option>
+          <option value="Specials">Specials</option>
         </select>
-
       </div>
 
       <div class="editor-form">
-
-        <input
-          id="itemName"
-          placeholder="Item name"
-        >
-
-        <input
-          id="itemPrice"
-          type="number"
-          min="0"
-          step="0.01"
-          placeholder="Price"
-        >
-
-        <button
-          id="addItemBtn"
-          class="active"
-        >
-          Add item
-        </button>
-
+        <input id="itemName" placeholder="Item name">
+        <input id="itemPrice" type="number" min="0" step="0.01" placeholder="Price">
+        <button id="addItemBtn" class="active">Add item</button>
       </div>
 
-      <div
-        id="editorList"
-        class="editor-list"
-      ></div>
-
+      <div id="editorList" class="editor-list"></div>
     </div>
-
   </section>
 
 </main>
 
-<div
-  id="status"
-  class="status"
-></div>
-
+<div id="status" class="status"></div>
 
 <script>
-
 const DEFAULT_MENU = {
+  name: "Caseys",
+  categories: {
+  Food: [
+    {name:"Pancakes",price:300},
+    {name:"Hash Browns",price:200},
+    {name:"Omelette",price:200},
+    {name:"Plate of Bacon",price:200},
+    {name:"French Toast",price:150},
+    {name:"Lasagna",price:200},
+    {name:"Loaded Fries",price:300},
+    {name:"Loaded Chilli Burger",price:350}
+  ],
 
-  name:"Caseys",
-
-  categories:{
-
-    Food:[
-      {
-        name:"Pancakes",
-        price:300
-      },
-      {
-        name:"Hash Browns",
-        price:200
-      },
-      {
-        name:"Omelette",
-        price:200
-      },
-      {
-        name:"Plate of Bacon",
-        price:200
-      },
-      {
-        name:"French Toast",
-        price:150
-      },
-      {
-        name:"Lasagna",
-        price:200
-      },
-      {
-        name:"Loaded Fries",
-        price:300
-      },
-      {
-        name:"Loaded Chilli Burger",
-        price:350
-      }
-    ],
-
-    Drinks:[
-      {
-        name:"Espresso",
-        price:100
-      },
-      {
-        name:"BedBull Energy",
-        price:75
-      },
-      {
-        name:"Cranberry Juice",
-        price:50
-      },
-      {
-        name:"Strawberry Milkshake",
-        price:100
-      },
-      {
-        name:"Mint Strawberry Refresher",
-        price:250
-      }
-    ],
-
-    Specials:[
-      {
-        name:"Cop Special",
-        price:150
-      },
-      {
-        name:"Breakfast Special",
-        price:350
-      },
-      {
-        name:"Wake Up Special",
-        price:375
-      },
-      {
-        name:"Adrenaline Junkie",
-        price:280
-      },
-      {
-        name:"OH YEAH!",
-        price:300
-      }
+  Drinks: [
+    {name:"Espresso",price:100},
+    {name:"BedBull Energy",price:75},
+    {name:"Cranberry Juice",price:50},
+    {name:"Strawberry Milkshake",price:100},
+    {name:"Mint Strawberry Refresher",price:250}
+  ],
+  Specials: [
+    {name:"Cop Special",price:150},
+    {name:"Breakfast Special",price:350},
+    {name:"Wake Up Special",price:375},
+    {name:"Adrenaline Junkie",price:280},
+    {name:"OH YEAH!",price:300}
     ]
-
   }
-
 };
 
-
 let menu = loadStoredMenu();
-
 let order = [];
 
-
-const $ = id =>
-  document.getElementById(id);
-
-
-/* LOAD MENU */
+const $ = id => document.getElementById(id);
 
 function loadStoredMenu(){
-
   try{
-
-    const saved =
-      localStorage.getItem("orderPadMenu");
-
-    return saved
-      ? JSON.parse(saved)
-      : structuredClone(DEFAULT_MENU);
-
+    const saved = localStorage.getItem("orderPadMenu");
+    return saved ? JSON.parse(saved) : structuredClone(DEFAULT_MENU);
   }catch(e){
-
     return structuredClone(DEFAULT_MENU);
-
   }
-
 }
-
-
-/* SAVE MENU */
 
 function saveMenu(){
-
-  menu.name =
-    $("editorMenuName").value.trim()
-    || "My Menu";
-
-  localStorage.setItem(
-    "orderPadMenu",
-    JSON.stringify(menu)
-  );
-
+  menu.name = $("editorMenuName").value.trim() || "My Menu";
+  localStorage.setItem("orderPadMenu", JSON.stringify(menu));
   updateMenuName();
-
   renderMenuButtons();
-
   renderEditor();
-
   showStatus("Menu saved");
-
 }
-
-
-/* UPDATE MENU NAME */
 
 function updateMenuName(){
-
-  $("menuName").value =
-    menu.name;
-
-  $("editorMenuName").value =
-    menu.name;
-
-  $("menuPill").textContent =
-    menu.name;
-
+  $("menuName").value = menu.name;
+  $("editorMenuName").value = menu.name;
+  $("menuPill").textContent = menu.name;
 }
-
-
-/* MONEY */
 
 function money(value){
-
-  return "$" +
-    Number(value).toFixed(2);
-
+  return "$" + Number(value).toFixed(2);
 }
-
-
-/* RENDER ORDER MENU */
 
 function renderMenuButtons(){
-
-  const root =
-    $("menuButtons");
-
+  const root = $("menuButtons");
   root.innerHTML = "";
 
-
-  Object.entries(menu.categories)
-  .forEach(([category,items])=>{
-
-    const title =
-      document.createElement("div");
-
-    title.className =
-      "section-title" +
-      (
-        category === "Specials"
-        ? " special-title"
-        : ""
-      );
-
-    title.textContent =
-      category;
-
+  Object.entries(menu.categories).forEach(([category,items])=>{
+    const title = document.createElement("div");
+    title.className = "section-title" + (category==="Specials" ? " special-title" : "");
+    title.textContent = category;
     root.appendChild(title);
 
-
-    const grid =
-      document.createElement("div");
-
-    grid.className =
-      "menu-grid";
-
+    const grid = document.createElement("div");
+    grid.className = "menu-grid";
 
     items.forEach((item,index)=>{
-
-      const btn =
-        document.createElement("button");
-
-      btn.className =
-        "menu-button" +
-        (
-          category === "Specials"
-          ? " special"
-          : ""
-        );
-
-      btn.innerHTML =
-        `${escapeHtml(item.name)}
-        <br>
-        (${money(item.price)})`;
-
-
-      btn.addEventListener(
-        "click",
-        ()=>addToOrder(category,index)
-      );
-
-
+      const btn = document.createElement("button");
+      btn.className = "menu-button" + (category==="Specials" ? " special" : "");
+      btn.innerHTML = `${escapeHtml(item.name)}<br>(${money(item.price)})`;
+      btn.addEventListener("click",()=>addToOrder(category,index));
       grid.appendChild(btn);
-
     });
 
-
     root.appendChild(grid);
-
   });
 
-
-  const title =
-    document.createElement("div");
-
-  title.className =
-    "section-title current-order";
-
-  title.textContent =
-    "Current Order";
-
+  const title = document.createElement("div");
+  title.className = "section-title current-order";
+  title.textContent = "Current Order";
   root.appendChild(title);
 
-
-  const current =
-    document.createElement("div");
-
-  current.id =
-    "currentOrder";
-
+  const current = document.createElement("div");
+  current.id = "currentOrder";
   root.appendChild(current);
 
-
   renderOrder();
-
 }
-
-
-/* ADD ITEM TO ORDER */
 
 function addToOrder(category,index){
-
-  const item =
-    menu.categories[category][index];
-
-
+  const item = menu.categories[category][index];
   order.push({
-
-    id:
-      crypto.randomUUID
-      ? crypto.randomUUID()
-      : String(Date.now()+Math.random()),
-
+    id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()+Math.random()),
     category,
-
     name:item.name,
-
     price:Number(item.price)
-
   });
-
-
   renderOrder();
-
   updateReceipt();
-
 }
-
-
-/* REMOVE FROM ORDER */
 
 function removeFromOrder(id){
-
-  order =
-    order.filter(
-      x => x.id !== id
-    );
-
+  order = order.filter(x=>x.id!==id);
   renderOrder();
-
   updateReceipt();
-
 }
 
-
-/* RENDER CURRENT ORDER */
-
 function renderOrder(){
-
-  const root =
-    $("currentOrder");
-
+  const root = $("currentOrder");
   if(!root)return;
 
   root.innerHTML = "";
 
-
-  if(order.length === 0){
-
-    root.innerHTML =
-      '<div class="order-empty">' +
-      'No items yet. Tap buttons above to add.' +
-      '</div>';
-
+  if(order.length===0){
+    root.innerHTML = '<div class="order-empty">No items yet. Tap buttons above to add.</div>';
     return;
-
   }
-
 
   const grouped = {};
-
-
   order.forEach(item=>{
-
-    const key =
-      item.category +
-      "|" +
-      item.name +
-      "|" +
-      item.price;
-
-
-    if(!grouped[key]){
-
-      grouped[key] = {
-
-        item,
-
-        qty:0,
-
-        ids:[]
-
-      };
-
-    }
-
-
+    const key = item.category+"|"+item.name+"|"+item.price;
+    if(!grouped[key]) grouped[key] = {item,qty:0,ids:[]};
     grouped[key].qty++;
-
-    grouped[key].ids.push(
-      item.id
-    );
-
+    grouped[key].ids.push(item.id);
   });
 
+  Object.values(grouped).forEach(group=>{
+    const row = document.createElement("div");
+    row.className = "order-row";
 
-  Object.values(grouped)
-  .forEach(group=>{
+    const name = document.createElement("div");
+    name.className = "name";
+    name.textContent = group.item.name;
 
-    const row =
-      document.createElement("div");
+    const qty = document.createElement("div");
+    qty.className = "qty";
+    qty.textContent = group.qty > 1 ? "x"+group.qty : "";
 
-    row.className =
-      "order-row";
+    const total = document.createElement("div");
+    total.textContent = money(group.item.price * group.qty);
 
-
-    const name =
-      document.createElement("div");
-
-    name.className =
-      "name";
-
-    name.textContent =
-      group.item.name;
-
-
-    const qty =
-      document.createElement("div");
-
-    qty.className =
-      "qty";
-
-    qty.textContent =
-      group.qty > 1
-      ? "x" + group.qty
-      : "";
-
-
-    const total =
-      document.createElement("div");
-
-    total.textContent =
-      money(
-        group.item.price *
-        group.qty
-      );
-
-
-    const remove =
-      document.createElement("button");
-
-    remove.className =
-      "small-danger";
-
-    remove.textContent =
-      "Remove";
-
-
+    const remove = document.createElement("button");
+    remove.className = "small-danger";
+    remove.textContent = "Remove";
     remove.onclick = ()=>{
-
-      removeFromOrder(
-        group.ids[
-          group.ids.length - 1
-        ]
-      );
-
+      removeFromOrder(group.ids[group.ids.length-1]);
     };
 
-
-    row.append(
-      name,
-      qty,
-      total,
-      remove
-    );
-
-
+    row.append(name,qty,total,remove);
     root.appendChild(row);
-
   });
-
 }
 
-
-/* RECEIPT */
-
 function updateReceipt(){
+  const receipt = $("receipt");
 
-  const receipt =
-    $("receipt");
-
-
-  if(order.length === 0){
-
-    receipt.value =
-      "(no items)";
-
+  if(order.length===0){
+    receipt.value = "(no items)";
     return;
-
   }
 
+  const discountPercent = Math.min(100,Math.max(0,Number($("discount").value)||0));
+  const shorthand = $("shorthand").checked;
+  const breakdown = $("breakdown").checked;
 
-  const discountPercent =
-    Math.min(
-      100,
-      Math.max(
-        0,
-        Number(
-          $("discount").value
-        ) || 0
-      )
-    );
-
-
-  const shorthand =
-    $("shorthand").checked;
-
-  const breakdown =
-    $("breakdown").checked;
-
-
-  let subtotal =
-    order.reduce(
-      (sum,item)=>
-        sum + item.price,
-      0
-    );
-
-
-  let discountAmount =
-    subtotal *
-    discountPercent /
-    100;
-
-
-  let total =
-    subtotal -
-    discountAmount;
-
+  let subtotal = order.reduce((sum,item)=>sum+item.price,0);
+  let discountAmount = subtotal * discountPercent / 100;
+  let total = subtotal - discountAmount;
 
   let lines = [];
 
-
   if(shorthand){
-
     const grouped = {};
-
-
     order.forEach(item=>{
-
-      const key =
-        item.name +
-        "|" +
-        item.price;
-
-
-      if(!grouped[key]){
-
-        grouped[key] = {
-
-          name:item.name,
-
-          price:item.price,
-
-          qty:0
-
-        };
-
-      }
-
-
+      const key = item.name+"|"+item.price;
+      if(!grouped[key]) grouped[key]={name:item.name,price:item.price,qty:0};
       grouped[key].qty++;
-
     });
 
-
-    Object.values(grouped)
-    .forEach(item=>{
-
+    Object.values(grouped).forEach(item=>{
       lines.push(
-
-        `${
-          item.qty > 1
-          ? item.qty + "x "
-          : ""
-        }${item.name} - ${
-          money(
-            item.price *
-            item.qty
-          )
-        }`
-
+        `${item.qty > 1 ? item.qty+"x " : ""}${item.name} - ${money(item.price*item.qty)}`
       );
-
     });
-
-
   }else{
-
     order.forEach(item=>{
-
-      lines.push(
-        `${item.name} - ${
-          money(item.price)
-        }`
-      );
-
+      lines.push(`${item.name} - ${money(item.price)}`);
     });
-
   }
-
 
   if(breakdown){
-
     lines.push("");
-
-    lines.push(
-      "BREAKDOWN"
-    );
-
-
-    Object.entries(
-      menu.categories
-    ).forEach(([category])=>{
-
-      const catTotal =
-        order
-        .filter(
-          x =>
-            x.category === category
-        )
-        .reduce(
-          (sum,x)=>
-            sum + x.price,
-          0
-        );
-
-
-      if(catTotal > 0){
-
-        lines.push(
-          `${category}: ${
-            money(catTotal)
-          }`
-        );
-
-      }
-
+    lines.push("BREAKDOWN");
+    Object.entries(menu.categories).forEach(([category])=>{
+      const catTotal = order
+        .filter(x=>x.category===category)
+        .reduce((sum,x)=>sum+x.price,0);
+      if(catTotal>0) lines.push(`${category}: ${money(catTotal)}`);
     });
-
   }
-
 
   lines.push("");
-
-  lines.push(
-    `Subtotal: ${
-      money(subtotal)
-    }`
-  );
-
-
-  if(discountPercent > 0){
-
-    lines.push(
-      `Discount (${
-        discountPercent
-      }%): -${
-        money(discountAmount)
-      }`
-    );
-
+  lines.push(`Subtotal: ${money(subtotal)}`);
+  if(discountPercent>0){
+    lines.push(`Discount (${discountPercent}%): -${money(discountAmount)}`);
   }
+  lines.push(`TOTAL: ${money(total)}`);
 
-
-  lines.push(
-    `TOTAL: ${
-      money(total)
-    }`
-  );
-
-
-  receipt.value =
-    lines.join("\n");
-
+  receipt.value = lines.join("\n");
 }
-
-
-/* CLEAR ORDER */
 
 function clearOrder(){
-
   order = [];
-
   renderOrder();
-
   updateReceipt();
-
 }
-
-
-/* COPY RECEIPT */
 
 async function copyReceipt(){
-
   try{
-
-    await navigator.clipboard.writeText(
-      $("receipt").value
-    );
-
-    showStatus(
-      "Receipt copied"
-    );
-
+    await navigator.clipboard.writeText($("receipt").value);
+    showStatus("Receipt copied");
   }catch(e){
-
     $("receipt").select();
-
-    document.execCommand(
-      "copy"
-    );
-
-    showStatus(
-      "Receipt copied"
-    );
-
+    document.execCommand("copy");
+    showStatus("Receipt copied");
   }
-
 }
-
-
-/* SELECT RECEIPT */
 
 function selectReceipt(){
-
   $("receipt").focus();
-
   $("receipt").select();
-
 }
-
-
-/* EDITOR */
 
 function renderEditor(){
-
-  const list =
-    $("editorList");
-
+  const list = $("editorList");
   list.innerHTML = "";
 
+  Object.entries(menu.categories).forEach(([category,items])=>{
+    items.forEach((item,index)=>{
+      const row = document.createElement("div");
+      row.className = "editor-row";
 
-  Object.entries(
-    menu.categories
-  ).forEach(([category,items])=>{
+      const info = document.createElement("div");
+      info.innerHTML = `<div>${escapeHtml(item.name)}</div><div class="category-chip">${category}</div>`;
 
-    items.forEach(
-      (item,index)=>{
+      const price = document.createElement("div");
+      price.className = "price";
+      price.textContent = money(item.price);
 
-        const row =
-          document.createElement(
-            "div"
-          );
+      const edit = document.createElement("button");
+      edit.textContent = "Edit";
+      edit.onclick = ()=>{
+        const newName = prompt("Item name:",item.name);
+        if(newName===null)return;
 
-        row.className =
-          "editor-row";
+        const newPrice = prompt("Price:",item.price);
+        if(newPrice===null)return;
 
+        const priceNumber = Number(newPrice);
+        if(!newName.trim() || !Number.isFinite(priceNumber) || priceNumber<0){
+          alert("Please enter a valid name and price.");
+          return;
+        }
 
-        const info =
-          document.createElement(
-            "div"
-          );
+        menu.categories[category][index] = {
+          name:newName.trim(),
+          price:priceNumber
+        };
 
-        info.innerHTML =
-          `<div>${
-            escapeHtml(item.name)
-          }</div>
-          <div class="category-chip">
-            ${category}
-          </div>`;
+        saveMenu();
+      };
 
-
-        const price =
-          document.createElement(
-            "div"
-          );
-
-        price.className =
-          "price";
-
-        price.textContent =
-          money(item.price);
-
-
-        const edit =
-          document.createElement(
-            "button"
-          );
-
-        edit.textContent =
-          "Edit";
-
-
-        edit.onclick = ()=>{
-
-          const newName =
-            prompt(
-              "Item name:",
-              item.name
-            );
-
-
-          if(newName === null)
-            return;
-
-
-          const newPrice =
-            prompt(
-              "Price:",
-              item.price
-            );
-
-
-          if(newPrice === null)
-            return;
-
-
-          const priceNumber =
-            Number(newPrice);
-
-
-          if(
-            !newName.trim() ||
-            !Number.isFinite(
-              priceNumber
-            ) ||
-            priceNumber < 0
-          ){
-
-            alert(
-              "Please enter a valid name and price."
-            );
-
-            return;
-
-          }
-
-
-          menu.categories[
-            category
-          ][index] = {
-
-            name:
-              newName.trim(),
-
-            price:
-              priceNumber
-
-          };
-
-
+      const del = document.createElement("button");
+      del.textContent = "Delete";
+      del.className = "small-danger";
+      del.onclick = ()=>{
+        if(confirm(`Delete "${item.name}"?`)){
+          menu.categories[category].splice(index,1);
           saveMenu();
+        }
+      };
 
-        };
-
-
-        const del =
-          document.createElement(
-            "button"
-          );
-
-        del.textContent =
-          "Delete";
-
-        del.className =
-          "small-danger";
-
-
-        del.onclick = ()=>{
-
-          if(
-            confirm(
-              `Delete "${item.name}"?`
-            )
-          ){
-
-            menu.categories[
-              category
-            ].splice(index,1);
-
-            saveMenu();
-
-          }
-
-        };
-
-
-        row.append(
-          info,
-          price,
-          edit,
-          del
-        );
-
-
-        list.appendChild(row);
-
-      }
-    );
-
+      row.append(info,price,edit,del);
+      list.appendChild(row);
+    });
   });
-
 }
-
-
-/* ADD ITEM */
 
 function addItem(){
+  const name = $("itemName").value.trim();
+  const price = Number($("itemPrice").value);
+  const category = $("categorySelect").value;
 
-  const name =
-    $("itemName").value.trim();
-
-  const price =
-    Number(
-      $("itemPrice").value
-    );
-
-  const category =
-    $("categorySelect").value;
-
-
-  if(
-    !name ||
-    !Number.isFinite(price) ||
-    price < 0
-  ){
-
-    alert(
-      "Enter an item name and a valid price."
-    );
-
+  if(!name || !Number.isFinite(price) || price<0){
+    alert("Enter an item name and a valid price.");
     return;
-
   }
 
-
-  menu.categories[
-    category
-  ].push({
-
-    name,
-
-    price
-
-  });
-
+  menu.categories[category].push({name,price});
 
   $("itemName").value = "";
-
   $("itemPrice").value = "";
 
-
   saveMenu();
-
 }
-
-
-/* ORDER TAB */
 
 function switchToOrder(){
+  document.querySelectorAll(".order-mode").forEach(x=>x.style.display="");
+  $("specialsScreen").classList.remove("active-specials");
+  $("editorScreen").classList.remove("active-editor");
 
-  document
-    .querySelectorAll(".order-mode")
-    .forEach(
-      x =>
-        x.style.display = ""
-    );
-
-
-  $("specialsScreen")
-    .classList
-    .remove(
-      "active-specials"
-    );
-
-
-  $("editorScreen")
-    .classList
-    .remove(
-      "active-editor"
-    );
-
-
-  $("orderTab")
-    .classList
-    .add("active");
-
-  $("specialsTab")
-    .classList
-    .remove("active");
-
-  $("editTab")
-    .classList
-    .remove("active");
-
+  $("orderTab").classList.add("active");
+  $("specialsTab").classList.remove("active");
+  $("editTab").classList.remove("active");
 }
-
-
-/* SPECIALS TAB */
 
 function switchToSpecials(){
+  document.querySelectorAll(".order-mode").forEach(x=>x.style.display="none");
+  $("editorScreen").classList.remove("active-editor");
+  $("specialsScreen").classList.add("active-specials");
 
-  document
-    .querySelectorAll(".order-mode")
-    .forEach(
-      x =>
-        x.style.display = "none"
-    );
-
-
-  $("editorScreen")
-    .classList
-    .remove(
-      "active-editor"
-    );
-
-
-  $("specialsScreen")
-    .classList
-    .add(
-      "active-specials"
-    );
-
-
-  $("orderTab")
-    .classList
-    .remove("active");
-
-  $("specialsTab")
-    .classList
-    .add("active");
-
-  $("editTab")
-    .classList
-    .remove("active");
-
+  $("orderTab").classList.remove("active");
+  $("specialsTab").classList.add("active");
+  $("editTab").classList.remove("active");
 }
-
-
-/* EDIT MENU TAB */
 
 function switchToEditor(){
+  document.querySelectorAll(".order-mode").forEach(x=>x.style.display="none");
+  $("specialsScreen").classList.remove("active-specials");
+  $("editorScreen").classList.add("active-editor");
 
-  document
-    .querySelectorAll(".order-mode")
-    .forEach(
-      x =>
-        x.style.display = "none"
-    );
-
-
-  $("specialsScreen")
-    .classList
-    .remove(
-      "active-specials"
-    );
-
-
-  $("editorScreen")
-    .classList
-    .add(
-      "active-editor"
-    );
-
-
-  $("orderTab")
-    .classList
-    .remove("active");
-
-  $("specialsTab")
-    .classList
-    .remove("active");
-
-  $("editTab")
-    .classList
-    .add("active");
-
+  $("orderTab").classList.remove("active");
+  $("specialsTab").classList.remove("active");
+  $("editTab").classList.add("active");
 
   renderEditor();
-
 }
-
-
-/* LOAD NAMED MENU */
 
 function loadNamedMenu(){
+  const name = $("menuName").value.trim();
+  const savedMenus = JSON.parse(localStorage.getItem("orderPadMenus") || "{}");
 
-  const name =
-    $("menuName")
-    .value
-    .trim();
-
-
-  const savedMenus =
-    JSON.parse(
-      localStorage.getItem(
-        "orderPadMenus"
-      ) || "{}"
-    );
-
-
-  if(
-    name &&
-    savedMenus[name]
-  ){
-
-    menu =
-      savedMenus[name];
-
+  if(name && savedMenus[name]){
+    menu = savedMenus[name];
     order = [];
-
     updateMenuName();
-
     renderMenuButtons();
-
     updateReceipt();
-
-    showStatus(
-      "Menu loaded"
-    );
-
+    showStatus("Menu loaded");
   }else{
-
-    showStatus(
-      "No saved menu with that name"
-    );
-
+    showStatus("No saved menu with that name");
   }
-
 }
-
-
-/* SAVE NAMED MENU */
 
 function saveNamedMenu(){
+  const name = $("editorMenuName").value.trim() || "My Menu";
+  menu.name = name;
 
-  const name =
-    $("editorMenuName")
-    .value
-    .trim()
-    || "My Menu";
-
-
-  menu.name =
-    name;
-
-
-  const savedMenus =
-    JSON.parse(
-      localStorage.getItem(
-        "orderPadMenus"
-      ) || "{}"
-    );
-
-
-  savedMenus[name] =
-    menu;
-
-
-  localStorage.setItem(
-    "orderPadMenus",
-    JSON.stringify(
-      savedMenus
-    )
-  );
-
-
-  localStorage.setItem(
-    "orderPadMenu",
-    JSON.stringify(
-      menu
-    )
-  );
-
+  const savedMenus = JSON.parse(localStorage.getItem("orderPadMenus") || "{}");
+  savedMenus[name] = menu;
+  localStorage.setItem("orderPadMenus",JSON.stringify(savedMenus));
+  localStorage.setItem("orderPadMenu",JSON.stringify(menu));
 
   updateMenuName();
-
-  showStatus(
-    "Menu saved"
-  );
-
+  showStatus("Menu saved");
 }
-
-
-/* STATUS */
 
 function showStatus(text){
-
-  const s =
-    $("status");
-
-
-  s.textContent =
-    text;
-
-
-  s.classList.add(
-    "show"
-  );
-
-
-  clearTimeout(
-    showStatus.timer
-  );
-
-
-  showStatus.timer =
-    setTimeout(
-      () =>
-        s.classList.remove(
-          "show"
-        ),
-      1600
-    );
-
+  const s = $("status");
+  s.textContent = text;
+  s.classList.add("show");
+  clearTimeout(showStatus.timer);
+  showStatus.timer = setTimeout(()=>s.classList.remove("show"),1600);
 }
-
-
-/* ESCAPE HTML */
 
 function escapeHtml(value){
-
   return String(value)
-
-    .replaceAll(
-      "&",
-      "&amp;"
-    )
-
-    .replaceAll(
-      "<",
-      "&lt;"
-    )
-
-    .replaceAll(
-      ">",
-      "&gt;"
-    )
-
-    .replaceAll(
-      '"',
-      "&quot;"
-    )
-
-    .replaceAll(
-      "'",
-      "&#039;"
-    );
-
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
 }
 
+$("clearOrderBtn").onclick = clearOrder;
+$("copyBtn").onclick = copyReceipt;
+$("selectBtn").onclick = selectReceipt;
+$("discount").oninput = updateReceipt;
+$("breakdown").onchange = updateReceipt;
+$("shorthand").onchange = updateReceipt;
+$("addItemBtn").onclick = addItem;
+$("saveMenuBtn").onclick = saveNamedMenu;
+$("loadMenuBtn").onclick = loadNamedMenu;
+$("orderTab").onclick = switchToOrder;
+$("specialsTab").onclick = switchToSpecials;
+$("editTab").onclick = switchToEditor;
 
-/* BUTTON EVENTS */
+$("itemName").addEventListener("keydown",e=>{
+  if(e.key==="Enter") addItem();
+});
 
-$("clearOrderBtn").onclick =
-  clearOrder;
-
-$("copyBtn").onclick =
-  copyReceipt;
-
-$("selectBtn").onclick =
-  selectReceipt;
-
-$("discount").oninput =
-  updateReceipt;
-
-$("breakdown").onchange =
-  updateReceipt;
-
-$("shorthand").onchange =
-  updateReceipt;
-
-$("addItemBtn").onclick =
-  addItem;
-
-$("saveMenuBtn").onclick =
-  saveNamedMenu;
-
-$("loadMenuBtn").onclick =
-  loadNamedMenu;
-
-$("orderTab").onclick =
-  switchToOrder;
-
-$("specialsTab").onclick =
-  switchToSpecials;
-
-$("editTab").onclick =
-  switchToEditor;
-
-
-/* ENTER TO ADD ITEM */
-
-$("itemName")
-  .addEventListener(
-    "keydown",
-    e => {
-
-      if(e.key === "Enter")
-        addItem();
-
-    }
-  );
-
-
-$("itemPrice")
-  .addEventListener(
-    "keydown",
-    e => {
-
-      if(e.key === "Enter")
-        addItem();
-
-    }
-  );
-
-
-/* START */
+$("itemPrice").addEventListener("keydown",e=>{
+  if(e.key==="Enter") addItem();
+});
 
 updateMenuName();
-
 renderMenuButtons();
-
 updateReceipt();
-
 </script>
 
 </body>
 </html>
-</body>
-</html>
+```
